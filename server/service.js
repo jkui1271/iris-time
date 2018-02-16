@@ -10,7 +10,7 @@ service.get('/service/:location', (req, res, next) => {
 
     request.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + req.params.location + '&key=GEO_API_KEY', (err, response) => {
         if(err) {
-            console.log(err);
+            console.log(dev_error);
             return res.sendStatus(500);
         }
 
